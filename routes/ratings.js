@@ -7,7 +7,7 @@ import {
   updateRating,
   deleteRating,
 } from "../controllers/ratingsController.js";
-import authMiddleware from "../middleware/authmiddleware.js";
+import authMiddleware from "../middleware/authMiddleware.js";
 
 // Public routes
 router.get("/products/:productId/ratings", getProductRatings);

@@ -8,7 +8,7 @@ import {
   getProductById,
 } from "../controllers/ProductController.js";
 import uploadMiddleware from "../middleware/uploadMiddleware.js";
-import authMiddleware from "../middleware/authmiddleware.js";
+import authMiddleware from "../middleware/authMiddleware.js";
 import adminMiddleware from "../middleware/adminMiddleware.js";
 
 const productRoutes = express.Router();
@@ -18,7 +18,7 @@ productRoutes.post(
   authMiddleware,
   adminMiddleware,
   uploadMiddleware.array("images", 5),
-  createProduct
+  createProduct,
 );
 productRoutes.get("/new-arrivals", getNewArrivalData);
 productRoutes.get("/navrati-special", getNavratiSpecialData);
@@ -27,7 +27,7 @@ productRoutes.get(
   "/all-products",
   authMiddleware,
   adminMiddleware,
-  getAllProducts
+  getAllProducts,
 );
 productRoutes.get("/:id", authMiddleware, adminMiddleware, getProductById);
 
