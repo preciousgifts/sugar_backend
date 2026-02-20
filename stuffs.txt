@@ -1,0 +1,6 @@
+#logs configuration
+# can be either info, warn, or error or all
+#auth, cart, orders, products, utilities
+
+UtilitiesA - App functionalities
+utilitiesB - product apis
